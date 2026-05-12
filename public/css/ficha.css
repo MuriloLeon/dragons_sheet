@@ -1,0 +1,948 @@
+.headerFicha {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 10px 0 10px;
+}
+
+.personagem{
+  border-color: #fff;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  width: 40%;
+  height: 55px;
+  padding: 10px 0 0 20px ;
+}
+
+.personagem h1{
+  color: white;
+  margin: 0;  
+}
+
+.cardCaracteristicas {
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  margin-right: 20px;
+  border-color: #fff;
+  border-radius: 5px;
+  border-width: 2px;
+  border-style: solid;
+  width: 60%;
+  height: 60px;
+  padding: 7px 0 0 20px ;
+}
+
+.caracteristicas {
+  display: flex;
+  justify-content: baseline;
+  height: 30px;
+}
+
+.caracteristicas p {
+  margin: 3px 3px 5px 0;
+  color: white;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.caracteristicas input {
+  height: 5px;
+  font-size: 15px;
+  border-width: 0px;
+  text-align: left;
+  margin-bottom: 10px;
+  padding: 10px 10px 10px 3%;
+  background-color: #4e4e4e;
+  font-weight: 800;
+  color: #fff;
+}
+
+.tamanhoClasse{
+  width: 120px;
+}
+
+.tamanhoRaca{
+  width: 150px;
+}
+
+.tamanhoNivel{
+  width: 50px;
+}
+
+.tamanhoExp{
+  width: 90px;
+}
+
+.caracteristicas input:focus {
+    outline: none; 
+}
+
+.salvar{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.btnSalvar {
+  cursor: pointer;
+  background-color: #C563EF;
+  color: white;
+  font-weight: 800;
+  font-size: 18px;
+  border-width: 0;
+  height: 30px;
+  border-radius: 7px;
+  width: 100px;
+}
+
+.btnSalvar:hover {
+  background-color: #9939c2;
+}
+
+.atributoVida {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 30px 10px 10px 10px;
+}
+
+.atributos {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  border-radius: 5px;
+  width: 40%;
+  align-items: center;
+}
+
+.atributoBonus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+  position: relative;
+}
+
+.atributoBonus p {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+.bonus {
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #1F1F1F;
+  margin-bottom: 15px;
+  width: 70px;
+  height: 70px;
+}
+
+.bonus p{
+  margin: 10px;
+  font-size: 40px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.valor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border-color: #000000;
+  border-width: 2px;
+  border-style: solid;
+  position: absolute;
+  z-index: 10;
+  bottom: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.valor input{
+  color: #000000;
+  margin: 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  background-color: transparent;
+  border: 0;
+}
+
+.valor input:focus {
+  outline: none;
+}
+
+.cardVida {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  border-width: 2px;
+  border-color: white;
+  border-style: solid;
+  border-radius: 5px;
+  width: 50%;
+  align-items: center;
+}
+
+.vida {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.vida p{
+  color: white;
+  font-size: 17px;
+  margin: 5px 0;
+  font-weight: 700;
+}
+
+.barraVida {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #e20a0a;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white;
+  border-radius: 10px;
+  width: 425px;
+}
+
+.barraVida input{
+  background-color: transparent;
+  border: 0;
+  width: 30px;
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.barraVida input:focus {
+  outline: none;
+}
+
+.blocoVidaDeslocamento{
+  display: flex;
+  flex-direction: column;
+}
+
+.deslocamentoDVida {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.deslocamentoDVida p{
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.deslocamentoDVida input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 1px solid white;
+  color: white;
+  width: 50px;
+  font-size: 17px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.deslocamentoDVida input:focus{
+  outline: none;
+}
+
+.deslocamentoDVida span{
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 10px;
+}
+
+.armadura{
+  background-color: #fff;
+  border: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 115px;
+  height: 100px;
+}
+
+.armadura p{
+  margin: 0 0 5px 0;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.armadura input{
+  background-color: transparent;
+  border: 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  width: 50px;
+  margin-bottom: 8px;
+}
+
+.armadura input:focus{
+  outline: none;
+}
+
+.iniciativa{
+  background-color: #fff;
+  border: 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 115px;
+  height: 100px;
+}
+
+.iniciativa p{
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.iniciativa input{
+  background-color: transparent;
+  border: 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  width: 50px;
+}
+
+.iniciativa input:focus{
+  outline: none;
+}
+
+.containerElementos{
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* ========================= */
+/* LADO ESQUERDO */
+/* ========================= */
+
+.canto-esquerdo{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.bonusProficiencia,
+.percepcaoPassiva{
+  border: 2px solid #fff;
+  border-radius: 10px;
+  width: 290px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: transparent;
+}
+
+.circuloBonus,
+.circuloPercepcao{
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circuloBonus input,
+.circuloPercepcao input{
+  border: 0;
+  background: transparent;
+  width: 40px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.circuloBonus input:focus,
+.circuloPercepcao input:focus{
+  outline: none;
+}
+
+.bonusProficiencia p,
+.percepcaoPassiva p{
+  color: white;
+  margin-left: 65px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* ========================= */
+/* Salvaguarda */
+/* ========================= */
+
+.salvaguardas{
+  width: 260px;
+
+  border: 2px solid white;
+  border-radius: 12px;
+
+  padding: 15px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  position: relative;
+}
+
+/* TITULO */
+
+.salvaguardas h3{
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  margin: 0;
+
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* COLUNAS */
+
+.colunaAtributos,
+.colunaProficiencia,
+.colunaBonus,
+.colunaOutros{
+  margin-top: 55px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.colunaProficiencia{
+    margin-right: 20px;
+}
+
+.colunaBonus {
+    margin-right: 10px;
+
+}
+
+/* TEXTOS */
+
+.colunaAtributos p,
+.colunaProficiencia p,
+.colunaBonus p,
+.colunaOutros p{
+  margin: 0;
+
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* TITULOS */
+
+.tituloColuna{
+  font-size: 11px ;
+  font-weight: 700 ;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+
+
+  margin-bottom: 8px ;
+}
+
+/* CHECKBOX */
+
+.checkbox{
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+
+  border: 2px solid white;
+  border-radius: 50%;
+
+  align-self: center;
+}
+
+/* INPUTS */
+
+.colunaBonus input,
+.colunaOutros input{
+  width: 30px;
+  height: 14px;
+
+  background-color: #fff;
+
+  border: 1px solid white;
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.colunaBonus input:focus,
+.colunaOutros input:focus{
+  outline: none;
+}
+
+/* LARGURA DAS COLUNAS */
+
+.colunaAtributos{
+  width: 95px;
+}
+
+.colunaProficiencia{
+  align-items: center;
+}
+
+.colunaBonus,
+.colunaOutros{
+  align-items: center;
+}
+
+/* ========================= */
+/* Salvaguarda contra Morte*/
+/* ========================= */
+
+.salvaguardasMorte{
+  width: 295px;
+  min-height: 120px;
+
+  border: 2px solid white;
+  border-radius: 12px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* TITULO */
+
+.salvaguardasMorte h3{
+  margin: 0;
+
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* SUCESSO E FALHA */
+
+.sucesso,
+.falha{
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* TEXTOS */
+
+.sucesso p,
+.falha p{
+  margin: 0;
+
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* CONTAINER CHECKBOX */
+
+.conteinerCheckbox{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+/* CHECKBOX */
+
+.checkboxMorte{
+  width: 18px;
+  height: 18px;
+
+  border: 2px solid white;
+
+  background-color: white;
+
+  border-radius: 3px;
+
+  cursor: pointer;
+}
+
+.pericias{
+  width: 360px;
+  min-height: 640px;
+
+  border: 2px solid white;
+  border-radius: 12px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  align-items: flex-start;
+
+  position: relative;
+}
+
+/* TITULO */
+
+.pericias h3{
+  position: absolute;
+
+  top: 10px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  margin: 0;
+
+  color: white;
+
+  font-size: 26px;
+  font-weight: 700;
+}
+
+/* COLUNAS */
+
+.colunaPericia,
+.colunaProficienciaPericia,
+.colunaAtributoPericia,
+.colunaBonusPericia,
+.colunaOutrosPericia{
+  margin-top: 55px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+/* TITULOS DAS COLUNAS */
+
+.tituloColunaPericia{
+  color: white;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  margin-bottom: 10px;
+
+  text-align: center;
+
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TEXTOS */
+
+.colunaPericia p,
+.colunaAtributoPericia p{
+  margin: 0;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  height: 22px;
+
+  display: flex;
+  align-items: center;
+}
+
+/* COLUNA NOME */
+
+.colunaPericia{
+  width: 130px;
+}
+
+/* PROFICIENCIA */
+
+.colunaProficienciaPericia{
+  align-items: center;
+}
+
+.checkboxPericia{
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+
+  border: 2px solid white;
+  border-radius: 50%;
+
+  margin-top: 3px;
+}
+
+/* ATRIBUTO */
+
+.colunaAtributoPericia{
+  align-items: center;
+}
+
+/* BONUS E OUTROS */
+
+.colunaBonusPericia,
+.colunaOutrosPericia{
+  align-items: center;
+}
+
+.colunaBonusPericia input,
+.colunaOutrosPericia input{
+  width: 35px;
+  height: 20px;
+
+  background-color: #fff;
+
+  border:0;
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.colunaBonusPericia input:focus,
+.colunaOutrosPericia input:focus{
+  outline: none;
+}
+
+
+/* ======================= */
+/*       ROLAGENS          */
+/* ======================= */
+
+.rolagens{
+  width: 800px;
+
+  border: 2px solid white;
+  border-radius: 8px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+
+  color: white;
+}
+
+/* TITULO */
+
+.rolagens h3{
+  position: absolute;
+
+  top: 10px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* ======================== */
+/* AREA ESQUERDA */
+/* ======================== */
+
+.selecao{
+  width: 140px;
+
+  margin-top: 40px;
+  padding-right: 15px;
+
+  border-right: 1px solid white;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.selecao p{
+  margin: 0;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* INPUTS */
+
+.selecao input,
+.selecao select{
+  width: 50px;
+  height: 28px;
+  text-align: center;
+  border: 1px solid white;
+
+  background-color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  padding-left: 5px;
+}
+
+.selecao select{
+  width: 90px;
+}
+.selecao input:focus{
+  outline: none;
+}
+
+/* BOTAO */
+
+.selecao button{
+  width: 70px;
+  height: 28px;
+
+  margin-top: 20px;
+
+  border: 0;
+  border-radius: 5px;
+
+  background-color: #8a2be2;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* ======================== */
+/* RESULTADO */
+/* ======================== */
+
+.resultado{
+  flex: 1;
+
+  margin-top: 40px;
+  padding-left: 25px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.resultado h2{
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* NUMERO */
+
+.resultado > p{
+  margin: 20px 0 30px 0;
+
+  text-align: center;
+
+  font-size: 70px;
+  font-weight: 700;
+}
+
+/* DETALHES */
+
+.detalheResultado{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  margin-top: 10px;
+}
+
+/* LEGENDAS */
+
+.legenda,
+.resultadoDetalhe{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.legenda p{
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.resultadoDetalhe p{
+  margin: 0;
+
+  font-size: 34px;
+  font-weight: 700;
+
+  text-align: center;
+}
+
+/* PRIMEIRO RESULTADO */
+
+.resultadoDetalhe p:first-child{
+  font-size: 20px;
+  font-weight: 500;
+}

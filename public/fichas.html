@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragon's Sheet | Fichas</title>
+
+  <script src="./js/sessao.js"></script>
+
+  <link rel="stylesheet" href="./css/estilo.css" />
+  <link rel="icon" href="./assets/icon/favicon2.ico" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+</head>
+<body onload="exibirFichas()">
+
+  <div class="header">
+    <div class="container">
+      <h1 class="titulo">Sheet</h1>
+      <ul class="navbar">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="fichas.html"><span class="agora">Fichas</span></a>
+        </li>
+        <li>
+          <a href="historico.html">Histórico das rolagens</a>
+        </li>
+        </ul>
+      <ul class="navbar-entrar">
+        <li>
+          <a href="login.html">Entrar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="top_ficha" >
+    <button class="btn_ficha">Nova Ficha</button>
+  </div>
+  <div class="card_fichas" id="card_fichas">
+
+  </div>
+</body>
+</html>
+<script>
+     function exibirFichas() {
+        JSON.parse(sessionStorage.FICHA).forEach(item => {
+            document.getElementById("card_fichas").innerHTML += `
+                <div class="card_acessar">
+                    <div class="titulo_fichas">
+                        <p>${nomePersonagem}</p><p>${level}</p>
+                    </div>
+                    <div class="descri_fichas">
+                        <p>Classe: ${classePersonagem}</p>
+                        <p>Raça: ${racaPersonagem}</p>
+                    </div>
+                    <button class="btn_acessar-ficha">Acessar Ficha</button>
+                </div>
+                    `
+        });
+    }
+</script>

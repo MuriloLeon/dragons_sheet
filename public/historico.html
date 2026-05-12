@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragon's Sheet | Histórico</title>
+
+  <script src="./js/sessao.js"></script>
+
+  <link rel="stylesheet" href="./css/estilo.css" />
+  <link rel="icon" href="./assets/icon/favicon2.ico" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <h1 class="titulo">Sheet</h1>
+      <ul class="navbar">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="fichas.html">Fichas</a>
+        </li>
+        <li>
+          <a href="historico.html"><span class="agora">Histórico das rolagens</span></a>
+        </li>
+        </ul>
+      <ul class="navbar-entrar">
+        <li>
+          <a href="login.html">Entrar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="top_ficha historico">
+    <div class="kpi-rolagens acerto">
+        <p>Acertos Críticos:</p>
+        <p><span>1</span></p>
+    </div>
+    <div class="kpi-rolagens total">
+        <p>Rolagens totais:</p>
+        <p><span>20</span></p>
+    </div>
+    <div class="kpi-rolagens erro">
+        <p>Erros Críticos:</p>
+        <p><span>0</span></p>
+    </div>
+  </div>
+  <div class="card_historico">
+
+  </div>
+</body>
+</html>
+<script>
+     function exibirFichasHistorico() {
+        JSON.parse(sessionStorage.FICHA).forEach(item => {
+            document.getElementById("card_historico").innerHTML += `
+                <div class="card_acessar">
+                    <div class="titulo_fichas">
+                        <p>Nome</p>
+                    </div>
+                    <div class="descri_rolagens">
+                        <p>Rolagens totais: ${rolagensTotais}</p>
+                        <p class="acertos">Acertos Críticos: ${acertoCriticos}</p>
+                        <p class="erros">Erros Críticos: ${errosCriticos}</p>
+                    </div>
+                    <button class="btn_acessar-ficha">Ver Detalhes</button>
+                </div>
+                    `
+        });
+    }
+</script>

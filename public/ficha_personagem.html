@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragon's Sheet | Ficha</title>
+
+  <script src="./js/sessao.js"></script>
+
+  <link rel="stylesheet" href="./css/estilo.css" />
+  <link rel="stylesheet" href="./css/ficha.css" />
+  <link rel="icon" href="./assets/icon/favicon2.ico" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+</head>
+<body>
+
+  <div class="header">
+    <div class="container">
+      <h1 class="titulo">Sheet</h1>
+      <ul class="navbar">
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="fichas.html"><span class="agora">Fichas</span></a>
+        </li>
+        <li>
+          <a href="historico.html">Histórico das rolagens</a>
+        </li>
+        </ul>
+      <ul class="navbar-entrar">
+        <li>
+          <a href="login.html">Entrar</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+<div class="headerFicha">
+    <div class="personagem">
+        <h1>Personagem</h1>
+    </div>
+
+    <div class="cardCaracteristicas">
+      <div class="caracteristicas">
+        <p>Classe:</p>
+        <input type="text" name="" id="ipt_classe" class="tamanhoClasse">
+      </div>
+        <div class="caracteristicas">
+          <p>Raça:</p>
+        <input type="text" name="" id="ipt_raca" class="tamanhoRaca">
+        </div>
+      <div class="caracteristicas">
+        <p>Nível:</p>
+        <input type="text" name="" id="ipt_nivel" class="tamanhoNivel">
+      </div>
+      <div class="caracteristicas">
+        <p>Alinhamento:</p>
+        <input type="text" name="" id="ipt_alinhamento" class="tamanhoRaca">
+      </div>
+      <div class="caracteristicas">
+        <p>Experiência:</p>
+        <input type="text" name="" id="ipt_exp" class="tamanhoExp">
+      </div>
+      <div class="caracteristicas">
+        <p>Antecedentes:</p>
+        <input type="text" name="" id="ipt_antecedente" class="tamanhoRaca">
+      </div>
+    </div>
+
+    <div class="salvar">
+      <button class="btnSalvar">Salvar</button>
+    </div>
+</div>
+
+<div class="atributoVida">
+    <div class="atributos">
+      <div class="atributoBonus">
+        <p>Força</p>
+        <div class="bonus">
+          <p>+2</p>
+        </div>
+        <div class="valor">
+          <input type="text" name="" id="ipt_valorFor">
+        </div>
+      </div>
+
+       <div class="atributoBonus">
+        <p>Destreza</p>
+        <div class="bonus">
+          <p>+2</p>
+        </div>
+        <div class="valor">
+          <input type="text" name="" id="ipt_valorFor">
+        </div>
+      </div>
+
+       <div class="atributoBonus">
+        <p>Constituição</p>
+        <div class="bonus">
+          <p>+2</p>
+        </div>
+        <div class="valor">
+          <input type="text" name="" id="ipt_valorFor">
+        </div>
+      </div>
+
+       <div class="atributoBonus">
+        <p>Intelecto</p>
+        <div class="bonus">
+          <p>+2</p>
+        </div>
+        <div class="valor">
+          <input type="text" name="" id="ipt_valorFor">
+        </div>
+      </div>
+
+      <div class="atributoBonus">
+        <p>Sabedoria</p>
+        <div class="bonus">
+          <p>+2</p>
+        </div>
+        <div class="valor">
+          <input type="text" name="" id="ipt_valorFor">
+        </div>
+      </div>
+
+      <div class="atributoBonus">
+        <p>Carisma</p>
+        <div class="bonus">
+          <p>+2</p>
+        </div>
+        <div class="valor">
+          <input type="text" name="" id="ipt_valorFor">
+        </div>
+      </div>
+    </div>
+
+    <div class="cardVida">
+      <div class="blocoVidaDeslocamento">
+        <div class="vida">
+          <p>Vida</p>
+          <div class="barraVida">
+            <input type="text" name="" id="ipt_vidaAtual">
+            <p>/</p>
+            <input type="text" name="" id="ipt_vidaMaxima">
+          </div>
+        </div>
+        <div class="deslocamentoDVida">
+            <p>Deslocamento:</p>
+            <input type="text" name="" id="ipt_deslocamento">
+            <span>|</span>
+            <p>Dado de Vida:</p>
+            <input type="text" id="ipt_dadoVida">
+        </div>
+      </div>
+
+      <div class="armadura">
+        <p>Classe de Armadura</p>
+        <input type="text" name="" id="ipt_armadura">
+      </div>
+      <div class="iniciativa">
+        <p>Iniciativa</p>
+        <input type="text" name="" id="ipt_iniciativa">
+      </div>
+    </div>
+</div>
+<div class="containerElementos">
+
+  <div class="canto-esquerdo">
+    
+    <div class="bonusProficiencia">
+      <div class="circuloBonus">
+        <input type="text" value="+2">
+      </div>
+      
+      <p>Bônus de Proficiência</p>
+    </div>
+    
+    <div class="percepcaoPassiva">
+      <div class="circuloPercepcao">
+        <input type="text" value="12">
+      </div>
+      
+      <p>Percepção Passiva</p>
+    </div>
+    
+    <div class="salvaguardas">
+      <h3>Salvaguardas</h3>
+      
+      <div class="colunaAtributos">
+        <span class="tituloColuna">Atributo</span>
+        <p>Força</p>
+        <p>Destreza</p>
+        <p>Constituição</p>
+        <p>Sabedoria</p>
+        <p>Intelecto</p>
+        <p>Carisma</p>
+      </div>
+      <div class="colunaProficiencia">
+        <span class="tituloColuna">Proficiência</span>
+        <div class="checkbox"></div>
+        <div class="checkbox"></div>
+        <div class="checkbox"></div>
+        <div class="checkbox"></div>
+        <div class="checkbox"></div>
+        <div class="checkbox"></div>
+      </div>
+      
+      <div class="colunaBonus">
+        <span class="tituloColuna">Bônus</span>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+      </div>
+
+      <div class="colunaOutros">
+        <span class="tituloColuna">Outros</span>
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+      </div>
+    </div>
+
+    <div class="salvaguardasMorte">
+      <h3>Salvaguarda contra Morte</h3>
+      <div class="sucesso">
+        <p>Sucesso</p>
+        <div class="conteinerCheckbox">
+          <div class="checkboxMorte"></div>
+          <div class="checkboxMorte"></div>
+          <div class="checkboxMorte"></div>
+        </div>
+      </div>
+      <div class="falha">
+        <p>Falha</p>
+        <div class="conteinerCheckbox">
+          <div class="checkboxMorte"></div>
+          <div class="checkboxMorte"></div>
+          <div class="checkboxMorte"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="pericias">
+      <h3>Pericias</h3>
+      
+      <div class="colunaPericia">
+        <span class="tituloColunaPericia">Pericia</span>
+        <p>Acrobacia</p>
+        <p>Arcanismo</p>
+        <p>Atletismo</p>
+        <p>Atuação</p>
+        <p>Enganação</p>
+        <p>Furtividade</p>
+        <p>História</p>
+        <p>Intimidação</p>
+        <p>Intuição</p>
+        <p>Investigação</p>
+        <p>Lidar com Animais</p>
+        <p>Medicina</p>
+        <p>Natureza</p>
+        <p>Percepção</p>
+        <p>Persuasão</p>
+        <p>Prestigitação</p>
+        <p>Religião</p>
+        <p>Sobrevivência</p>
+      </div>
+      <div class="colunaProficienciaPericia">
+        <span class="tituloColunaPericia">Proficiência</span>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+        <div class="checkboxPericia"></div>
+      </div>
+      <div class="colunaAtributoPericia">
+        <span class="tituloColunaPericia">Atributo</span>
+        <p>Des</p>
+        <p>Int</p>
+        <p>For</p>
+        <p>Car</p>
+        <p>Car</p>
+        <p>Des</p>
+        <p>Int</p>
+        <p>Car</p>
+        <p>Sab</p>
+        <p>Int</p>
+        <p>Sab</p>
+        <p>Sab</p>
+        <p>Int</p>
+        <p>Sab</p>
+        <p>Car</p>
+        <p>Des</p>
+        <p>Int</p>
+        <p>Sab</p>
+      </div>
+      
+      <div class="colunaBonusPericia">
+        <span class="tituloColunaPericia">Bônus</span>
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+        <input type="text">
+      </div>
+
+      <div class="colunaOutrosPericia">
+        <span class="tituloColunaPericia">Outros</span>
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+        <input type="text" value="0">
+      </div>
+    </div>
+    <div class="rolagens">
+      <h3>Rolagens de Dados</h3>
+      <div class="selecao">
+          <p>Quantidade</p>
+          <input type="text" value="1">
+          <p>Tipo de Dado</p>
+          <select id="tipoDado">
+            <option value="d20">d20</option>
+            <option value="d12">d12</option>
+            <option value="d10">d10</option>
+            <option value="d8">d8</option>
+            <option value="d6">d6</option>
+            <option value="d4">d4</option>
+          </select>
+          <p>Bônus</p>
+          <input type="text">
+          <p>Tipo de Rolagens</p>
+          <select id="tipoRolagem">
+            <option value="vantagem">Vantagem</option>
+            <option value="desvatagem">Desvatagem</option>
+            <option value="soma">Soma</option>
+          </select>
+          <button>Rolar</button>
+      </div>
+      <div class="resultado">
+        <h2>Resultado:</h2>
+        <p>15</p>
+        <div class="detalheResultado">
+            <div class="legenda">
+              <p>Dados rolados:</p>
+              <p>Bônus:</p>
+              <p>Resultado Final:</p>
+            </div>
+            <div class="resultadoDetalhe">
+              <p>(13, 10)</p>
+              <p>+2</p>
+              <p>15</p>
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+</body>
+</html>
