@@ -1,27 +1,69 @@
 var database = require("../database/config");
 
-function buscarPorId(id) {
-  var instrucaoSql = `SELECT * FROM ficha WHERE usuario_id = '${id}'`;
-
-  return database.executar(instrucaoSql);
+function buscarFicha(id) {
+    var instrucao = `
+        SELECT nome, classe, nivel, raca FROM ficha WHERE usuario_id = ${id};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
 }
 
-function listar() {
-  var instrucaoSql = `SELECT id, razao_social, cnpj, codigo_ativacao FROM empresa`;
-
-  return database.executar(instrucaoSql);
+function criarFicha(nome, classe, nivel, vidaMaxima, vidaAtual, dadoVida, classeArmadura, deslocamento, cargaMaxima, cargaAtual, 
+                    percepcaoPassiva, raca, alinhamento, antecedentes, experiencia) {
+    var instrucao = `
+        INSERT INTO ficha (
+            nome, classe, nivel, vidaMaxima, vidaAtual, dadoVida, classeArmadura, deslocamento, cargaMaxima, cargaAtual, 
+            percepcaoPassiva, raca, alinhamento, antecedentes, experiencia
+            )
+        VALUES (
+            '${nome}', '${classe}', ${nivel}, ${vidaMaxima}, ${vidaAtual}, ${dadoVida}, ${classeArmadura}, ${deslocamento}, 
+            ${cargaMaxima}, ${cargaAtual}, ${percepcaoPassiva}, '${raca}', '${alinhamento}', '${antecedentes}', '${experiencia}' 
+        );
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
 }
 
-function buscarPorCnpj(cnpj) {
-  var instrucaoSql = `SELECT * FROM empresa WHERE cnpj = '${cnpj}'`;
+function inserirPoderes(nome, descricao){
 
-  return database.executar(instrucaoSql);
 }
 
-function cadastrar(razaoSocial, cnpj) {
-  var instrucaoSql = `INSERT INTO empresa (razao_social, cnpj) VALUES ('${razaoSocial}', '${cnpj}')`;
-
-  return database.executar(instrucaoSql);
+function buscarPoderes(idUsuario, idFicha){
+    var instrucao = `
+        SELECT nome, classe, nivel, raca FROM ficha WHERE usuario_id = ${id};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
 }
 
-module.exports = { buscarPorCnpj, buscarPorId, cadastrar, listar };
+
+function inserirMagias(nome, descricao){
+
+}
+
+function buscarMagias(idUsuario, idFicha){
+    var instrucao = `
+        SELECT nome, classe, nivel, raca FROM ficha WHERE usuario_id = ${id};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
+function inserirItens(nome, peso, descricao){
+
+}
+
+
+function buscarItens(idUsuario, idFicha){
+    var instrucao = `
+        SELECT nome, classe, nivel, raca FROM ficha WHERE usuario_id = ${id};
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+module.exports = {
+    criarFicha,
+    buscarFicha
+};

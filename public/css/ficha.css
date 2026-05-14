@@ -359,14 +359,14 @@
 .canto-esquerdo{
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 60px;
 }
 
 .bonusProficiencia,
 .percepcaoPassiva{
   border: 2px solid #fff;
   border-radius: 10px;
-  width: 290px;
+  width: 310px;
   height: 45px;
   display: flex;
   align-items: center;
@@ -415,7 +415,7 @@
 /* ========================= */
 
 .salvaguardas{
-  width: 260px;
+  width: 280px;
 
   border: 2px solid white;
   border-radius: 12px;
@@ -458,8 +458,12 @@
   gap: 12px;
 }
 
+.colunaAtributos{
+  gap: 12px;
+}
+
 .colunaProficiencia{
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .colunaBonus {
@@ -483,7 +487,7 @@
 /* TITULOS */
 
 .tituloColuna{
-  font-size: 11px ;
+  font-size: 8px ;
   font-weight: 700 ;
   font-size: 14px;
   font-weight: 600;
@@ -548,7 +552,7 @@
 /* ========================= */
 
 .salvaguardasMorte{
-  width: 295px;
+  width: 315px;
   min-height: 120px;
 
   border: 2px solid white;
@@ -621,7 +625,7 @@
 }
 
 .pericias{
-  width: 360px;
+  width: 380px;
   min-height: 640px;
 
   border: 2px solid white;
@@ -929,4 +933,190 @@
   font-weight: 800;
 }
 
-/* LEGENDAS */
+.containerEquipamentos{
+  width: 520px;
+  min-height: 500px;
+
+  border: 1px solid white;
+  border-radius: 6px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+}
+
+/* TITULO */
+
+.containerEquipamentos h3{
+  margin: 0 0 15px 0;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* ========================= */
+/* CARGA */
+/* ========================= */
+
+.carga_maxima{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+
+  margin-bottom: 18px;
+}
+
+.carga_maxima p{
+  margin: 0;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.carga_maxima input{
+  width: 35px;
+
+  border: 0;
+
+  background-color: transparent;
+
+  color: white;
+
+  text-align: center;
+
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.carga_maxima input:focus{
+  outline: none;
+}
+
+/* ========================= */
+/* BOTAO */
+/* ========================= */
+
+.btnEquipamento{
+  width: 160px;
+  height: 35px;
+
+  margin-bottom: 20px;
+
+  border: 0;
+  border-radius: 5px;
+
+  background-color: #8a2be2;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* ========================= */
+/* ITEM */
+/* ========================= */
+
+.item{
+  width: 100%;
+
+  background-color: #4b4b4b;
+
+  border-radius: 10px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  margin-bottom: 12px;
+}
+
+/* HEADER ITEM */
+
+.headerItens{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 10px;
+}
+
+.headerItens p {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* INPUT NOME */
+
+#ipt_nomeItem{
+  width: 250px;
+
+  border: 0;
+/*   border-bottom: 2px solid #fff; */
+
+  background-color: transparent;
+
+  color: white;
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* INPUT PESO */
+
+.peso{
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+#ipt_pesoItem{
+  width: 60px;
+
+  border: 0;
+/*   border-bottom: 2px solid #fff; */
+
+  background-color: transparent;
+
+  color: white;
+
+  text-align: right;
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* DESCRICAO */
+
+#ipt_descricaoItem{
+  min-width: 100%;
+  max-width: 100%;
+  border: 0;
+
+  background-color: transparent;
+
+  color: white;
+
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* FOCUS */
+
+#ipt_nomeItem:focus,
+#ipt_pesoItem:focus,
+#ipt_descricaoItem:focus{
+  outline: none;
+}
