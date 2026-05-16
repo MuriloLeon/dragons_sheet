@@ -88,22 +88,44 @@ body {
 
 .banner {
   height: var(--tamanho-banner);
-  color: white;
+  color: #EAEACE;
   background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
   background-size: cover;
 }
 
 .banner .container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 
+.container button{
+  border-radius: 10px;
+  background-color: #C563EF;
+  height: 40px;
+  border: 0;
+  margin: 40px 0 0 25%;
+  align-self: flex-start;
+  width: 200px;
+  cursor: pointer;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.container button:hover{
+  background-color: #a247c9;
+}
+
+
 .banner .container p {
   width: 50%;
   margin: 0;
   padding: 0;
-  font-size: 36px;
+  font-weight: 700;
+  font-size: 60px;
 }
 
 .banner .container span {
@@ -113,8 +135,9 @@ body {
 /* MISSÃO VISÃO VALORES */
 
 .social {
-  background-color: #e5e5e5;
+  background-color: #1f1f1f00;
   display: flex;
+  color: white;
 }
 
 .social .container {
@@ -127,25 +150,39 @@ body {
 
 .social .container .boxes {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 100px;
   width: 100%;
   padding: 30px 0;
 }
 
 .social p {
-  text-align: center;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.social h4{
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 .box {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+
+.textoHome{
+  width: 50%;
 }
 
 /* FOOTER */
 
 .footer {
-  background-color: #32b9cd;
+  margin-top: 100px;
+  background-color: #272424;
   height: 150px;
   color: #fff;
   display: flex;
@@ -153,6 +190,8 @@ body {
 }
 
 .footer .container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
 }
