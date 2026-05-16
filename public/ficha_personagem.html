@@ -360,7 +360,6 @@
       </div>
     </div>
 
-  <div>
     <div class="rolagens">
       <h3>Rolagens de Dados</h3>
       <div class="selecao">
@@ -404,7 +403,8 @@
         </div>
       </div>
       </div>
-
+      </div>
+<div class="listaPoderesItens">
       <div class="containerEquipamentos">
         <h3>Equipamentos</h3>
         <div class="carga_maxima">
@@ -414,21 +414,55 @@
           <p>Kg</p>
         </div>
         <button class="btnEquipamento">Novo Equipamento</button>
-        <div class="item">
-          <div class="headerItens">
-            <input type="text" id="ipt_nomeItem" value="Item" placeholder="Item">
-            <div class="peso">
-            <input type="text" id="ipt_pesoItem" value="0" placeholder="Peso">
-            <p>Kg</p>
+        <div class="containerItens">
+          <div class="item">
+            <div class="headerItens">
+              <input type="text" id="ipt_nomeItem" value="Item" placeholder="Item">
+              <div class="peso">
+              <input type="text" id="ipt_pesoItem" value="0" placeholder="Peso">
+              <p>Kg</p>
             </div>
+            <button>Salvar</button>
+            <button>Excluir</button>
+            </div>
+            <textarea type="text" id="ipt_descricaoItem" placeholder="Descrição"></textarea>
           </div>
-          <textarea type="text" id="ipt_descricaoItem" placeholder="Descrição"></textarea>
         </div>
       </div>
 
+      <div class="containerPoderes">
+        <h3>Poderes</h3>
+        <button class="btnPoder">Novo Poder</button>
+        <div class="containerPoder">
+          <div class="poder">
+            <div class="headerPoder">
+            <input type="text" id="ipt_nomePoder" value="Poder" placeholder="Poder">
+            <div>
+              <button>Salvar</button>
+              <button>Excluir</button>
+            </div>
+            </div>
+            <textarea type="text" id="ipt_descricaoPoder" placeholder="Descrição"></textarea>
+          </div>
+        </div>
+      </div>
 
-
-  </div>
-    </div>
+      <div class="containerMagias">
+        <h3>Magias</h3>
+        <button class="btnMagia">Novo Magia</button>
+        <div class="containerMagia">
+          <div class="magia">
+            <div class="headerMagia">
+            <input type="text" id="ipt_nomeMagia" value="Magia" placeholder="Magia">
+            <div>
+              <button>Salvar</button>
+              <button>Excluir</button>
+            </div>
+            </div>
+            <textarea type="text" id="ipt_descricaoMagia" placeholder="Descrição"></textarea>
+          </div>
+        </div>
+      </div>
+</div>
 </body>
 </html>

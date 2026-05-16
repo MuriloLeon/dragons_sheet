@@ -106,7 +106,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  margin: 30px 10px 10px 10px;
+  margin: 30px 20px 10px 10px;
 }
 
 .atributos {
@@ -773,6 +773,8 @@
 /*       ROLAGENS          */
 /* ======================= */
 
+
+
 .rolagens{
   width: 800px;
 
@@ -933,11 +935,23 @@
   font-weight: 800;
 }
 
+/* ==============================
+-------------ITENS--------------- 
+=================================*/
+
+.listaPoderesItens{
+  display: flex;
+  flex-direction: row;
+  margin: 20px 15px;
+  justify-content: space-between;
+}
+
 .containerEquipamentos{
   width: 520px;
   min-height: 500px;
 
-  border: 1px solid white;
+
+  border: 2px solid white;
   border-radius: 6px;
 
   padding: 15px;
@@ -950,6 +964,7 @@
 
   color: white;
 }
+
 
 /* TITULO */
 
@@ -1026,6 +1041,7 @@
 /* ITEM */
 /* ========================= */
 
+
 .item{
   width: 100%;
 
@@ -1041,13 +1057,20 @@
 }
 
 /* HEADER ITEM */
+.containerItens{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  width: 100%;
+  min-height: 500px;
+  max-height: 500px;
+}
 
 .headerItens{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-
   margin-bottom: 10px;
 }
 
@@ -1057,10 +1080,22 @@
   font-weight: 700;
 }
 
+.headerItens button {
+  border: 0;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-left: 8px;
+  font-weight: 600;
+  background-color: #8a2be2;
+  color: #fff;
+  cursor: pointer;
+
+}
+
 /* INPUT NOME */
 
 #ipt_nomeItem{
-  width: 250px;
+  width: 240px;
 
   border: 0;
 /*   border-bottom: 2px solid #fff; */
@@ -1083,14 +1118,14 @@
 
 #ipt_pesoItem{
   width: 60px;
-
+  
   border: 0;
-/*   border-bottom: 2px solid #fff; */
-
+  /*   border-bottom: 2px solid #fff; */
+  
   background-color: transparent;
-
+  
   color: white;
-
+  
   text-align: right;
 
   font-size: 25px;
@@ -1118,5 +1153,288 @@
 #ipt_nomeItem:focus,
 #ipt_pesoItem:focus,
 #ipt_descricaoItem:focus{
+  outline: none;
+}
+
+/* ===========================================
+-----------------PODERES-----------------------
+==============================================*/
+
+.containerPoderes{
+  width: 520px;
+  min-height: 500px;
+
+
+  border: 2px solid white;
+  border-radius: 6px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+}
+
+.containerPoderes h3{
+  margin: 0 0 15px 0;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.btnPoder{
+  width: 160px;
+  height: 35px;
+
+  margin-bottom: 20px;
+
+  border: 0;
+  border-radius: 5px;
+
+  background-color: #8a2be2;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.containerPoder{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  width: 100%;
+  min-height: 500px;
+  max-height: 500px;
+}
+
+
+.poder{
+  width: 100%;
+
+  background-color: #4b4b4b;
+
+  border-radius: 10px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  margin-bottom: 12px;
+}
+
+/* HEADER Poder */
+
+.headerPoder{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.headerPoder p {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.headerPoder button {
+  border: 0;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-left: 8px;
+  font-weight: 600;
+  background-color: #8a2be2;
+  color: #fff;
+  cursor: pointer;
+
+}
+
+/* INPUT NOME */
+
+#ipt_nomePoder{
+  width: 240px;
+
+  border: 0;
+
+  background-color: transparent;
+
+  color: white;
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+
+/* DESCRICAO */
+
+#ipt_descricaoPoder{
+  min-width: 100%;
+  max-width: 100%;
+  border: 0;
+
+  background-color: transparent;
+
+  color: white;
+
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* FOCUS */
+
+#ipt_nomePoder:focus,
+#ipt_descricaoPoder:focus{
+  outline: none;
+}
+
+
+/* ===========================================
+-----------------MAGIAS-----------------------
+==============================================*/
+
+.containerMagias{
+  width: 520px;
+  min-height: 500px;
+
+
+  border: 2px solid white;
+  border-radius: 6px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: white;
+}
+
+.containerMagias h3{
+  margin: 0 0 15px 0;
+
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.btnMagia{
+  width: 160px;
+  height: 35px;
+
+  margin-bottom: 20px;
+
+  border: 0;
+  border-radius: 5px;
+
+  background-color: #8a2be2;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.containerMagia{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  width: 100%;
+  min-height: 500px;
+  max-height: 500px;
+}
+
+
+.magia{
+  width: 100%;
+
+  background-color: #4b4b4b;
+
+  border-radius: 10px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  margin-bottom: 12px;
+}
+
+/* HEADER Poder */
+
+.headerMagia{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.headerMagia p {
+  margin: 0;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.headerMagia button {
+  border: 0;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-left: 8px;
+  font-weight: 600;
+  background-color: #8a2be2;
+  color: #fff;
+  cursor: pointer;
+
+}
+
+/* INPUT NOME */
+
+#ipt_nomeMagia{
+  width: 240px;
+
+  border: 0;
+
+  background-color: transparent;
+
+  color: white;
+
+  font-size: 25px;
+  font-weight: 700;
+}
+
+
+/* DESCRICAO */
+
+#ipt_descricaoMagia{
+  min-width: 100%;
+  max-width: 100%;
+  border: 0;
+
+  background-color: transparent;
+
+  color: white;
+
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* FOCUS */
+
+#ipt_nomeMagia:focus,
+#ipt_descricaoMagia:focus{
   outline: none;
 }
