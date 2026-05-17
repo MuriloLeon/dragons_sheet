@@ -8,14 +8,17 @@
   <script src="./js/sessao.js"></script>
 
   <link rel="stylesheet" href="./css/estilo.css" />
-  <link rel="icon" href="./assets/icon/favicon2.ico" />
+  <link rel="icon" href="./assets/icon/logo.ico" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
 <body onload="exibirFichas()">
 
   <div class="header">
     <div class="container">
-      <h1 class="titulo">Sheet</h1>
+      <div class="imagem">
+        <img src="./assets/imgs/logo.png" alt="">
+        <h1 class="titulo">Sheet</h1>
+      </div>
       <ul class="navbar">
         <li>
           <a href="index.html">Home</a>
@@ -39,7 +42,6 @@
     <button class="btn_ficha">Nova Ficha</button>
   </div>
   <div class="card_fichas" id="card_fichas">
-
   </div>
 </body>
 </html>
@@ -48,6 +50,7 @@
         JSON.parse(sessionStorage.FICHA).forEach(item => {
             document.getElementById("card_fichas").innerHTML += `
                 <div class="card_acessar">
+                   <button id="apagarFicha"></button>
                     <div class="titulo_fichas">
                         <p>${nomePersonagem}</p><p>${level}</p>
                     </div>

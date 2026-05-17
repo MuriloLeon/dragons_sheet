@@ -9,14 +9,17 @@
 
   <link rel="stylesheet" href="./css/estilo.css" />
   <link rel="stylesheet" href="./css/ficha.css" />
-  <link rel="icon" href="./assets/icon/favicon2.ico" />
+  <link rel="icon" href="./assets/icon/logo.ico" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
 <body>
 
   <div class="header">
     <div class="container">
-      <h1 class="titulo">Sheet</h1>
+      <div class="imagem">
+        <img src="./assets/imgs/logo.png" alt="">
+        <h1 class="titulo">Sheet</h1>
+      </div>
       <ul class="navbar">
         <li>
           <a href="index.html">Home</a>
@@ -423,7 +426,7 @@
               <p>Kg</p>
             </div>
             <button>Salvar</button>
-            <button>Excluir</button>
+            <button id="btnExcluir"></button>
             </div>
             <textarea type="text" id="ipt_descricaoItem" placeholder="Descrição"></textarea>
           </div>
@@ -439,7 +442,7 @@
             <input type="text" id="ipt_nomePoder" value="Poder" placeholder="Poder">
             <div>
               <button>Salvar</button>
-              <button>Excluir</button>
+              <button id="btnExcluir"></button>
             </div>
             </div>
             <textarea type="text" id="ipt_descricaoPoder" placeholder="Descrição"></textarea>
@@ -456,7 +459,7 @@
             <input type="text" id="ipt_nomeMagia" value="Magia" placeholder="Magia">
             <div>
               <button>Salvar</button>
-              <button>Excluir</button>
+              <button id="btnExcluir"></button>
             </div>
             </div>
             <textarea type="text" id="ipt_descricaoMagia" placeholder="Descrição"></textarea>
