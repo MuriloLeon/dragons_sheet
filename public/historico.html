@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dragon's Sheet | Histórico</title>
-
-  <script src="./js/sessao.js"></script>
-
-  <link rel="stylesheet" href="./css/estilo.css" />
-  <link rel="icon" href="./assets/icon/logo.ico" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
-</head>
+    <title>Dragon's Sheet | Histórico</title>
+    
+    <script src="./js/sessao.js"></script>
+    
+    <link rel="stylesheet" href="./css/estilo.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="icon" href="./assets/icon/logo.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+  </head>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <body>
   <div class="header">
     <div class="container">
@@ -36,42 +38,151 @@
       </ul>
     </div>
   </div>
-
-  <div class="top_ficha historico">
-    <div class="kpi-rolagens acerto">
-        <p>Acertos Críticos:</p>
-        <p><span>1</span></p>
+  <div class="Titulo">
+    <h1>Histórico das Rolagens</h1>
+  </div>
+  <div class="kpis">
+    <div class="maisJogado">
+      <p>Dado Mais Rolado</p>
+      <h2>d20</h2>
     </div>
-    <div class="kpi-rolagens total">
-        <p>Rolagens totais:</p>
-        <p><span>20</span></p>
+    <div class="rolagensTotais">
+      <p>Rolagens Totais</p>
+      <div class="total">
+        <p>20</p>
+        <img src="./assets/imgs/d20_white.png" alt="">
+      </div>
     </div>
-    <div class="kpi-rolagens erro">
-        <p>Erros Críticos:</p>
-        <p><span>0</span></p>
+    <div class="rolagensCritico">
+      <p>Sucessos Críticos</p>
+      <div class="total">
+        <p>1</p>
+        <img src="./assets/imgs/d20_green.png" alt="">
+      </div>
+    </div>
+    <div class="rolagensErro">
+      <p>Erros Críticos</p>
+      <div class="total">
+        <p>2</p>
+        <img src="./assets/imgs/d20_red.png" alt="">
+      </div>
     </div>
   </div>
-  <div class="card_historico">
 
+<div class="graficos">
+  <div class="graficoDado">
+    <canvas id="graficoDado"></canvas>
   </div>
+  <div class="graficoPercentual">
+    <canvas id="graficoPercentual"></canvas>
+  </div>
+</div>
+
+
 </body>
 </html>
+
 <script>
-     function exibirFichasHistorico() {
-        JSON.parse(sessionStorage.FICHA).forEach(item => {
-            document.getElementById("card_historico").innerHTML += `
-                <div class="card_acessar">
-                    <div class="titulo_fichas">
-                        <p>Nome</p>
-                    </div>
-                    <div class="descri_rolagens">
-                        <p>Rolagens totais: ${rolagensTotais}</p>
-                        <p class="acertos">Acertos Críticos: ${acertoCriticos}</p>
-                        <p class="erros">Erros Críticos: ${errosCriticos}</p>
-                    </div>
-                    <button class="btn_acessar-ficha">Ver Detalhes</button>
-                </div>
-                    `
-        });
+  const graficoDado = document.getElementById('graficoDado');
+
+  new Chart(graficoDado, {
+    type: 'bar',
+    data: {
+      labels: ['d20', 'd12', 'd10', 'd8', 'd6', 'd4'],
+      datasets: [{
+        label: 'Quantidade de rolagens',
+        data: [19, 12, 3, 5, 2, 3],
+        borderWidth: 1,
+        backgroundColor: '#C563EF',
+        borderColor: '#C563EF'
+      }]
+    },
+    options: {
+
+      plugins: {
+        title: {
+          display: true,
+          text: 'Dados mais Rolados',
+          color: '#C563EF',
+          font: {
+            size: 22,
+            weight: 'bold'
+          }
+        },
+        legend: {
+          labels: {
+            color: 'white',
+            font: {
+              weight: 'bold'
+            }
+          }
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: true,
+          ticks: {
+            color: 'white',
+            font: {
+              size: 12,
+              weight: 'bold'
+            }
+          }
+        },
+        x: {
+          ticks: {
+            color: 'white',
+            font: {
+              size: 12,
+              weight: 'bold'
+            }
+          }
+        }
+      }
     }
+  });
+
+const graficoPercentual = document.getElementById('graficoPercentual');
+  
+new Chart(graficoPercentual, {
+  type: 'doughnut',
+  data: {
+      datasets: [{
+          data: [1, 2, 17],
+          backgroundColor: [
+            '#17DE4D',
+            '#EB1919',
+            'grey'
+          ],
+      }],
+      labels: [ 'Sucesso Crítico', 'Falha Crítica', 'Outros' ]
+},
+  options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'right',
+            labels: {
+              color: 'white',
+              boxWidth: 30, 
+              padding: 15, 
+              font: {
+                weight: 'bold'
+              }
+            }
+          },
+          title: {
+            display: true,
+            text: 'Percentual de Críticos no d20',
+            color: 'white',
+            font: {
+              size: 22,
+              weight: 'bold'
+            }
+          }
+        }
+      }
+});
+
+
 </script>

@@ -1,0 +1,97 @@
+.graficoDado, .graficoPercentual {
+    width: 800px;
+    height: 400px; 
+    margin-left: 50px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.graficoPercentual{
+    display: flex;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+}
+
+.graficos {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.Titulo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.Titulo h1{
+    color: white;
+    font-size: 50px;
+}
+
+.kpis {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px 20px 40px 20px;
+}
+
+ .maisJogado, .rolagensTotais, .rolagensCritico, .rolagensErro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid white;
+    color: white;
+    width: 200px;
+    height: 125px;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 5px;
+ }
+
+ .rolagensTotais img, .rolagensCritico img, .rolagensErro img {
+    width: 30px;
+    height: 30px;
+ }
+
+  .maisJogado p, .rolagensTotais p, .rolagensCritico p, .rolagensErro p {
+    margin: 20px 0 5px 0;
+ }
+
+ .maisJogado h2{
+    margin: 0;
+    font-size: 40px;
+ }
+
+ .maisJogado{
+    color: #C563EF;
+    border-color: #C563EF;
+ }
+
+ .rolagensCritico {
+    color: #17DE4D;
+    border-color: #17DE4D;
+ }
+
+.rolagensErro {
+    color: #EB1919;
+    border-color: #EB1919;
+ }
+
+.total{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+ .total p{
+    margin: 0;
+    font-size: 40px;
+ }

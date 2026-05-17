@@ -555,58 +555,6 @@ input {
   color: #fff;
 }
 
-/* Histórico Rolagens */
-.kpi-rolagens {
-  font-size: 20px;
-  font-weight: 800;
-  text-align: center;
-
-}
-
-.kpi-rolagens p{
-  margin: 0;
-}
-
-.kpi-rolagens span{
-  font-size: 30px;
-  margin-top: 0;
-}
-
-.acerto{
-  color: #17de4d;
-}
-
-.total{
-  color: #ffff;
-}
-
-.erro{
-  color: #eb1919;
-}
-
-.historico {
-  margin-left: 200px;
-  margin-right: 200px;
-}
-
-.descri_rolagens{
-  margin: 5px 25px;
-  font-weight: 700;
-  font-size: 15px;
-}
-
-.descri_rolagens p{
-  margin: 5px 0 0 0;
-}
-
-.descri_rolagens .acertos{
-  color: #13B23E;
-}
-
-.descri_rolagens .erros{
-  color: #B21313;
-}
-
 @keyframes bell {
   0%   {transform: rotate(25deg)}
   25%  {transform: rotate(-25deg)}
