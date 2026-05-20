@@ -11,8 +11,24 @@
 </html>
 <script>
     function testar(){
-        fetch(`/ficha/buscarFicha${sessionStorage.ID_USUARIO}`, {
-            method: "GET"
+        fetch(`/ficha/buscarFicha/${sessionStorage.ID_USUARIO}`, {
+            method: "GET",
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    sessionStorage.FICHAS = JSON.stringify(json);
+                });
+
+            } 
+
+        }).catch(function (erro) {
+            console.log(erro);
         })
+        var fichas = JSON.parse(sessionStorage.FICHAS);
     }
 </script>

@@ -11,7 +11,7 @@
   <link rel="icon" href="./assets/icon/logo.ico" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
 </head>
-<body onload="exibirFichas()">
+<body>
 
   <div class="header">
     <div class="container">
@@ -46,20 +46,31 @@
 </body>
 </html>
 <script>
-     function exibirFichas() {
+    window.onload = verFichas;
 
-      
+    function verFichas() {
+        fetch(`/ficha/buscarFicha/${sessionStorage.ID_USUARIO}`, {
+            method: "GET"
+        })
+        .then(resposta => resposta.json())
+        .then(json => {
+            sessionStorage.FICHA = JSON.stringify(json);
+            exibirFichas(json);
+        });
 
-        JSON.parse(sessionStorage.FICHA).forEach(item => {
+}
+
+     function exibirFichas(fichas) {
+        fichas.forEach(item => {
             document.getElementById("card_fichas").innerHTML += `
                 <div class="card_acessar">
-                   <button id="apagarFicha"></button>
+                   <button class="apagarFicha"></button>
                     <div class="titulo_fichas">
-                        <p>${nomePersonagem}</p><p>${level}</p>
+                        <p>${item.nome}</p><p>Nivel: ${item.nivel}</p>
                     </div>
                     <div class="descri_fichas">
-                        <p>Classe: ${classePersonagem}</p>
-                        <p>Raça: ${racaPersonagem}</p>
+                        <p>Classe: ${item.classe}</p>
+                        <p>Raça: ${item.raca}</p>
                     </div>
                     <button class="btn_acessar-ficha">Acessar Ficha</button>
                 </div>

@@ -502,7 +502,7 @@ input {
   margin: 30px;
 }
 
-#apagarFicha {
+.apagarFicha {
   background-image: url("../assets/imgs/close.png");
   background-color: transparent;
   background-size: cover;
