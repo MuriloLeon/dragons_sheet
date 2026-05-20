@@ -1,9 +1,10 @@
 var fichaModel = require("../models/fichaModel");
 
-function buscarFichas(req, res) {
+function buscarFicha(req, res) {
   var idUsuario = req.params.id;
+  console.log(idUsuario)
 
-  fichaModel.buscarFichas(idUsuario).then(function(resultado){
+  fichaModel.buscarFicha(idUsuario).then(function(resultado){
     if (resultado.length > 0) {
         res.status(200).json(resultado);
     } else {
@@ -29,6 +30,6 @@ function criarFicha(req, res) {
 }
 
 module.exports = {
-    buscarFichas,
+    buscarFicha,
     criarFicha
 }
